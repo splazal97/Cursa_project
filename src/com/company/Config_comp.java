@@ -18,6 +18,8 @@ public class Config_comp {
             int opcion = scanner.nextInt();
             switch (opcion){
                 case 1:
+                    Participantes participantes = new Participantes();
+                    //metodo
                     System.out.println("Cuantos pilotos van a participar?");
                     int participantes = scanner.nextInt();
                     break;
