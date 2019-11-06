@@ -6,7 +6,7 @@ public class Menu {
 
     void lanzarMenu() {
         Scanner sc = new Scanner(System.in);
-
+        Config_comp config_comp = new Config_comp();
         int a;
         while(true) {
             System.out.println("TORNEO: ");
@@ -20,7 +20,7 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
-                    //CONFIGURACION COMPETICION
+                    config_comp.menu();
                     break;
                 case 2:
                     //RESULTADO PALMARES CLASIFICACION GENERAL
