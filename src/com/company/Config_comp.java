@@ -13,20 +13,23 @@ public class Config_comp {
             System.out.println("Configuracion de la competicion: ");
             System.out.println("1.Numero de participantes");
             System.out.println("2.Numero de carrereas");
-            System.out.println("3.Menu principal");
-                        int opcion = scanner.nextInt();
+            System.out.println("3.Tipo de vehículo");
+            System.out.println("4.Menu principal");
+            int opcion = scanner.nextInt();
             switch (opcion){
                 case 1:
-                    System.out.println("opcion 1");
-                break;
+                    System.out.println("Cuantos pilotos van a participar?");
+                    int participantes = scanner.nextInt();
+                    break;
                 case 2:
-                    System.out.println("opcion 2");
+                    System.out.println("Cuantos circuitos se van a correr?");
+                    int circuitos = scanner.nextInt();
                     break;
                 case 3:
-                    menu.lanzarMenu();
+                    System.out.println("opcion 3");
                     break;
                 case 4:
-                    System.out.println("opcion4");
+                    System.out.println("opcion 4");
                     return;
             }
         }
