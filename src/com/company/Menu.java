@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -7,6 +8,7 @@ public class Menu {
     void lanzarMenu() {
         Scanner sc = new Scanner(System.in);
         Config_comp config_comp = new Config_comp();
+        Jugar jugar = new Jugar();
         int a;
         while(true) {
             System.out.println("TORNEO: ");
@@ -26,7 +28,8 @@ public class Menu {
                     //RESULTADO PALMARES CLASIFICACION GENERAL
                     break;
                 case 3:
-                    //JUGAR
+                    jugar.carrera();
+                    //aqui se pasa un parametro de la array list de participantes nose como
                     break;
                 case 4:
                     return;

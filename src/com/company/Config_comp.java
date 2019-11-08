@@ -4,11 +4,8 @@ import java.util.Scanner;
 
 public class Config_comp {
     Scanner scanner = new Scanner(System.in);
-    Menu menu = new Menu();
+    int circuitos;
     void menu() {
-        Menu menu = new Menu();
-        System.out.println("Nombre?");
-        String nombre = scanner.next();
         while (true) {
             System.out.println("Configuracion de la competicion: ");
             System.out.println("1.Numero de participantes");
@@ -19,11 +16,12 @@ public class Config_comp {
             switch (opcion){
                 case 1:
                     Participantes participantes = new Participantes();
-                    //metodo
+                    participantes.añadirMiPiloto();
+                    participantes.añadirParticipantes();
                     break;
                 case 2:
                     System.out.println("Cuantos circuitos se van a correr?");
-                    int circuitos = scanner.nextInt();
+                    circuitos = scanner.nextInt();
                     break;
                 case 3:
                     System.out.println("opcion 3");

@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class Participantes {
     Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
-
     String nombrePiloto;
     ArrayList<String> pilotos = new ArrayList<String>();
 
@@ -19,9 +17,6 @@ public class Participantes {
 
     void añadirParticipantes(){
         System.out.println("Cuantos pilotos van a participar?");
-
-        ArrayList<String> pilotos = new ArrayList<String >();
-        Scanner scanner = new Scanner(System.in);
         String[] generarNombresAleatorios;
         int participantes = scanner.nextInt();
 
@@ -34,7 +29,7 @@ public class Participantes {
                 "Cutilles", "Martinez", "Gandia", "Hernandez", "Jimenez", "Villarejo", "Herruzo", "Caravaca", "Gonzalez",
                 "Quiñoa", "Callado", "Burgueño", "Casillas" };
 
-        for (int i = 0; i < participantes; i++) {
+        for (int i = 0; i < (participantes-1); i++) {
             nombresAleatorios[i] = nombres[(int) (Math.floor(Math.random() * ((nombres.length - 1) - 0 + 1) + 0))] + " "
                     + apellidos[(int) (Math.floor(Math.random() * ((apellidos.length - 1) - 0 + 1) + 0))];
         }
