@@ -4,26 +4,24 @@ import java.util.Scanner;
 
 public class Config_comp {
     Scanner scanner = new Scanner(System.in);
-    Menu menu = new Menu();
+    int circuitos;
     void menu() {
-        Menu menu = new Menu();
-        Circuito circuito = new Circuito();
-        System.out.println("Nombre?");
-        String nombre = scanner.next();
         while (true) {
             System.out.println("Configuracion de la competicion: ");
             System.out.println("1.Numero de participantes");
-            System.out.println("2.Numero de carrereas");
+            System.out.println("2.Numero de carreras");
             System.out.println("3.Tipo de vehículo");
             System.out.println("4.Menu principal");
             int opcion = scanner.nextInt();
             switch (opcion){
                 case 1:
-                    System.out.println("Cuantos pilotos van a participar?");
-                    int participantes = scanner.nextInt();
+                    Participantes participantes = new Participantes();
+                    participantes.añadirMiPiloto();
+                    participantes.añadirParticipantes();
                     break;
                 case 2:
-                    circuito.RandomCircuito();
+                    System.out.println("Cuantos circuitos se van a correr?");
+                    circuitos = scanner.nextInt();
                     break;
                 case 3:
                     System.out.println("opcion 3");
