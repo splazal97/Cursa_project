@@ -7,6 +7,7 @@ public class Config_comp {
     Menu menu = new Menu();
     void menu() {
         Menu menu = new Menu();
+        Circuito circuito = new Circuito();
         System.out.println("Nombre?");
         String nombre = scanner.next();
         while (true) {
@@ -18,14 +19,11 @@ public class Config_comp {
             int opcion = scanner.nextInt();
             switch (opcion){
                 case 1:
-                    Participantes participantes = new Participantes();
-                    //metodo
                     System.out.println("Cuantos pilotos van a participar?");
                     int participantes = scanner.nextInt();
                     break;
                 case 2:
-                    System.out.println("Cuantos circuitos se van a correr?");
-                    int circuitos = scanner.nextInt();
+                    circuito.RandomCircuito();
                     break;
                 case 3:
                     System.out.println("opcion 3");
