@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class Config_comp {
     Scanner scanner = new Scanner(System.in);
+    Vehiculos vehiculos = new Vehiculos();
     int circuitos;
+
     void menu() {
         while (true) {
             System.out.println("Configuracion de la competicion: ");
@@ -24,10 +26,9 @@ public class Config_comp {
                     circuitos = scanner.nextInt();
                     break;
                 case 3:
-                    System.out.println("opcion 3");
+                    vehiculos.elegirVehiculo();
                     break;
                 case 4:
-                    System.out.println("opcion 4");
                     return;
             }
         }

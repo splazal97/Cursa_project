@@ -28,7 +28,7 @@ public class Menu {
                     //RESULTADO PALMARES CLASIFICACION GENERAL
                     break;
                 case 3:
-                    jugar.carrera();
+                    //jugar.carrera();
                     //aqui se pasa un parametro de la array list de participantes nose como
                     break;
                 case 4:
