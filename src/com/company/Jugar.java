@@ -65,29 +65,42 @@ public class Jugar {
             cursa[i].setModel(model);
         }
 
+        System.out.println("Numero de carreras");
+        int carreras = scanner.nextInt();
+
         //Preguntem com es diu la cursa
         System.out.print("Escribe el nombre de la carrera: ");
         String lloc = scanner.nextLine();
 
 
 
+
         System.out.println("La carrera " + lloc + " va a comenzar!");
 
         //Posem la informació del corredors i els seus temps
-        for (i = 0; i < corredors; i++) {
-            System.out.println("El participante " + (i + 1) + ": " + cursa[i].pilot.nom + ". Edat: " + cursa[i].pilot.getEdat());
-            System.out.println("Participa con " + cursa[i].vehicle + ", modelo: " + cursa[i].getModel());
-            //Fem el random per veure quant ha tardat
-            cursa[i].temps = Math.floor(Math.random() * (max - min)) + min;
-            System.out.println("Ha realizado la carrera en: " + cursa[i].temps);
-            //Fem un sleep per a que es pugui llegir tota la informació
-            Thread.sleep(4000);
+
+        for (int j = 0; j < carreras ; j++) {
+
+            for (i = 0; i < corredors; i++) {
+                System.out.println("El participante " + (i + 1) + ": " + cursa[i].pilot.nom + ". Edat: " + cursa[i].pilot.getEdat());
+                System.out.println("Participa con " + cursa[i].vehicle + ", modelo: " + cursa[i].getModel());
+                //Fem el random per veure quant ha tardat
+                cursa[i].temps = Math.floor(Math.random() * (max - min)) + min;
+                System.out.println("Ha realizado la carrera en: " + cursa[i].temps);
+                //Fem un sleep per a que es pugui llegir tota la informació
+                Thread.sleep(4000);
+            }
+
+            System.out.println("------ Podio ------");
+            Arrays.sort(cursa);
+
+            cursa[0].pilot.puntuacion += 3;
+            cursa[1].pilot.puntuacion += 2;
+            cursa[2].pilot.puntuacion += 1;
+
+
         }
 
-        //Ordenamos el array
-        Arrays.sort(cursa);
-
-        System.out.println("------ Podio ------");
 
         //Realizamos un bucle para listar los corredores
         for (i = 0; i < corredors; i++) {
