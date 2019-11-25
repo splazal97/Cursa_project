@@ -1,16 +1,17 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Menu {
 
-    void lanzarMenu() {
+    void lanzarMenu() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         Config_comp config_comp = new Config_comp();
         Jugar jugar = new Jugar();
         int a;
-        while(true) {
+        while (true) {
             System.out.println("TORNEO: ");
             System.out.println("1.Configuració de la competició");
             System.out.println("2.Resultat/Palmarés/ClassificacióGeneral");
@@ -22,14 +23,12 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
-                    config_comp.menu();
                     break;
                 case 2:
                     //RESULTADO PALMARES CLASIFICACION GENERAL
                     break;
                 case 3:
-                    //jugar.carrera();
-                    //aqui se pasa un parametro de la array list de participantes nose como
+                    jugar.jugar();
                     break;
                 case 4:
                     return;
@@ -37,3 +36,4 @@ public class Menu {
         }
     }
 }
+
