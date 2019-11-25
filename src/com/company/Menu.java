@@ -8,7 +8,6 @@ public class Menu {
 
     void lanzarMenu() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
-        Config_comp config_comp = new Config_comp();
         Jugar jugar = new Jugar();
         int a;
         while (true) {

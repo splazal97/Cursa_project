@@ -12,6 +12,7 @@ public class Persona {
     public int getEdat() {
         return edat;
     }
+
     public int getPuntuacion(){
         return puntuacion;
     }
