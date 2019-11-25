@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Participantes {
-    Scanner scanner = new Scanner(System.in);
+   /* Scanner scanner = new Scanner(System.in);
     String nombrePiloto;
     ArrayList<String> pilotos = new ArrayList<String>();
 
@@ -17,7 +17,7 @@ public class Participantes {
 
     void añadirParticipantes(){
         System.out.println("Cuantos pilotos van a participar?");
-        String[] generarNombresAleatorios;
+       // String[] generarNombresAleatorios;
         int participantes = scanner.nextInt();
 
         String[] nombresAleatorios = new String[participantes];
@@ -41,5 +41,5 @@ public class Participantes {
         }
         System.out.println(pilotos);
     }
-
+*/
 }

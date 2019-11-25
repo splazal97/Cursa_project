@@ -7,7 +7,7 @@ public class Config_comp {
     Vehiculos vehiculos = new Vehiculos();
     int circuitos;
 
-    void menu() {
+    void menu() {/*
         while (true) {
             System.out.println("Configuracion de la competicion: ");
             System.out.println("1.Numero de participantes");
@@ -16,6 +16,8 @@ public class Config_comp {
             System.out.println("4.Menu principal");
             int opcion = scanner.nextInt();
             switch (opcion){
+
+            .
                 case 1:
                     Participantes participantes = new Participantes();
                     participantes.añadirMiPiloto();
@@ -32,5 +34,5 @@ public class Config_comp {
                     return;
             }
         }
-   }
-}
+   }*/
+}}
