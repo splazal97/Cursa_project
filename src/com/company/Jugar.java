@@ -36,7 +36,10 @@ public class Jugar {
 
             cursa[i].pilot.setEdat(edat);
 
-            //Preguntem pel vehicle
+            if (cursa[0].vehicle !=null){
+                cursa[i].vehicle = cursa[0].vehicle;
+            } else {
+                //Preguntem pel vehicle
                 do {
                     System.out.println("1 - Coche");
                     System.out.println("2 - Moto");
@@ -55,7 +58,7 @@ public class Jugar {
                     }
 
                 } while (op != 1 && op != 2 && op != 3); //Mentre que no posi una opcio valida, no pot sortir del bucle
-
+            }
 
             System.out.print("Escribe el modelo " + cursa[i].vehicle + ": ");
             String model = scanner.nextLine();
@@ -88,7 +91,7 @@ public class Jugar {
 
         //Realizamos un bucle para listar los corredores
         for (i = 0; i < corredors; i++) {
-            System.out.println((i + 1) + ". " + cursa[i].pilot.nom);
+            System.out.println((i + 1) + ". " + "Nombre:" + cursa[i].pilot.nom + "Tiempo: " + cursa[i].temps);
         }
         System.out.println("------------------");
     }
