@@ -1,10 +1,13 @@
 package com.company;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Jugar {
+    Cursa[] cursa;
+
     public  void jugar() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
 
@@ -21,7 +24,7 @@ public class Jugar {
             System.out.println("Los corredores minimos son 3");
         } else {
 
-            Cursa[] cursa = new Cursa[corredors];
+            cursa = new Cursa[corredors];
 
             for (i = 0; i < corredors; i++) {
                 //Iniciem l'array
@@ -70,13 +73,7 @@ public class Jugar {
 
             System.out.println("Numero de carreras");
             int carreras = scanner.nextInt();
-
-            //Preguntem com es diu la cursa
-            System.out.print("Escribe el nombre de la carrera: ");
-            String lloc = scanner.nextLine();
-
-
-            System.out.println("La carrera " + lloc + " va a comenzar!");
+            System.out.println("Las carreras van a comenzar!");
 
             //Posem la informació del corredors i els seus temps
 
@@ -95,26 +92,22 @@ public class Jugar {
                 cursa[0].pilot.puntuacion += 3;
                 cursa[1].pilot.puntuacion += 2;
                 cursa[2].pilot.puntuacion += 1;
-            //Realizamos un bucle para listar los corredores
-                for ( i = 0; i < corredors; i++) {
-                    System.out.println((i + 1) + ". " + "Nombre:" + cursa[i].pilot.nom + "Puntuacion: "+ cursa[i].pilot.puntuacion);
-                }
-                System.out.println("------------------");
+                System.out.println("--------------------------");
 
             }
 
 
         }
     }
-   /* public void palmares(){
-//Realizamos un bucle para listar los corredores
-                for ( i = 0; i < corredors; i++) {
+   public void palmares(){
+        //Realizamos un bucle para listar los corredores
+                for (int i = 0; i < cursa.length; i++) {
                     System.out.println((i + 1) + ". " + "Nombre:" + cursa[i].pilot.nom + "Puntuacion: "+ cursa[i].pilot.puntuacion);
                 }
-                System.out.println("------------------");
+                System.out.println("-----------------------");
 
         }
-    }*/
-
-
 }
+
+
+

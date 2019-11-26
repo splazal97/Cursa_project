@@ -24,7 +24,7 @@ public class Menu {
                     jugar.jugar();
                     break;
                 case 2:
-                    //RESULTADO PALMARES CLASIFICACION GENERAL
+                    jugar.palmares();
                     break;
                 case 3:
                     break;
